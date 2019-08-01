@@ -4,8 +4,9 @@ using UnityEngine;
 
 public class CharacterController : MonoBehaviour
 {
-
-    protected double speed = 1.0;
+    public static CharacterController instance;
+    public double speed = 1.0;
+    public float scrollSpeed = .5f;
 
     // Start is called before the first frame update
     void Start()
@@ -32,6 +33,8 @@ public class CharacterController : MonoBehaviour
 
         }
 
+
+        //For moving Vertically
         /*
         if(Input.GetKey(KeyCode.UpArrow))
         {
